@@ -20,7 +20,7 @@ public class AdditionalAttributes implements ModInitializer {
 	public static final EntityAttribute STEP_HEIGHT = createEntityAttribute("step_height", 0.6, 0, 16);
 
 	private static EntityAttribute createEntityAttribute(String name, double base, double min, double max) {
-		return new ClampedEntityAttribute("attribute.name.generic." + MOD_ID + name, base, min, max).setTracked(true);
+		return new ClampedEntityAttribute("attribute.name.generic." + MOD_ID + "." + name, base, min, max).setTracked(true);
 	}
 
 	@Override
