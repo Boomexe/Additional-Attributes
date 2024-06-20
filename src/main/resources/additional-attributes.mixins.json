@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "net.boomexe.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"PlayerEntityMixin",
+		"LivingEntityMixin",
+		"EntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
