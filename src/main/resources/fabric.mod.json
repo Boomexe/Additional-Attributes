@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "attitional-attributes",
+	"id": "additional-attributes",
 	"version": "${version}",
-	"name": "attitional attributes",
+	"name": "Additional attributes",
 	"description": "Library that adds Additional Attributes!",
 	"authors": [
 		"Boomexe"
