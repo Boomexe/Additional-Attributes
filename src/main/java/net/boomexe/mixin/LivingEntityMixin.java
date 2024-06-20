@@ -8,8 +8,6 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -33,7 +31,7 @@ public abstract class LivingEntityMixin extends Entity {
     @Inject(method = "setSprinting", at = @At("TAIL"))
     private void modifySprintingSpeedBoost(boolean sprinting, CallbackInfo ci) {
         if (this.isPlayer()) {
-            @Nullable final EntityAttributeInstance sprintSpeedBoost = this.getAttributeInstance(AdditionalAttributes.SPRINT_SPEED_BOOST);
+            @Nullable final EntityAttributeInstance sprintSpeedBoost = this.getAttributeInstance(AdditionalAttributes.SPRINT_SPEED);
             EntityAttributeModifier sprintingSpeedBoost = createSprintingSpeedBoost(sprintSpeedBoost.getValue());
 
             EntityAttributeInstance entityAttributeInstance = ((LivingEntity) (Object) this).getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED);
